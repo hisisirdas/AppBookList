@@ -1,0 +1,24 @@
+<!--<app-create-books></app-create-books>-->
+<div class="bs-docs-section" *ngIf="viewBooks">
+  <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Book Name</th>
+      <th scope="col">Book Author</th>
+      <th scope="col">Book URL</th>
+      <th scope="col">Personal Info</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-default" *ngFor="let books of viewBooks | async; let i = index">
+      <!--<th scope="col"><input class="form-control" [(ngModel)] = "books.bookName" /></th>-->
+       <th scope="col">{{books.bookName}}</th>
+      <th scope="col">{{ books.bookAuthor }}</th>
+      <th scope="col">{{ books.bookUrl }}</th>
+      <th scope="col">{{ books.personalInfo.name}}</th>
+      <td> <button (click) = "delBooks(i)" class= "btn btn-primary">X</button></td>
+    </tr>
+  </tbody>
+</table> 
+</div>

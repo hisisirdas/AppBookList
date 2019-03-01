@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-3">
+      <input class="input form-control" type="text" [(ngModel)]="book.bookName" placeholder="Book Name">
+  </div>
+
+  <div class="col-md-3">
+      <input class="input form-control" type="text" [(ngModel)]="book.bookAuthor" placeholder="Book Author" >
+  </div>
+
+  <div class="col-md-3">
+      <input class="input form-control" type="text" [(ngModel)]="book.bookUrl" placeholder="Book URL" >
+  </div>
+<div class="col-md-3">
+  <button class="btn btn-success col-md-5" style="margin-right: 5px;" (click)="addNewBooks()">Add a Book</button>
+  
+  <button class="btn btn-warning col-md-5" (click)="delAllBooks(i)">Delete All</button>
+  
+</div>
+
+</div>
